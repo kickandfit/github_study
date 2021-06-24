@@ -74,3 +74,10 @@ $ git commit -m "commit message"
 $ git log --oneline # git아 로그 볼껀데 한줄로 보여줘
 ```
 
+# mv
+
+```bash
+$ mv 01_git_intro.md 00_git_intro.md
+# $ mv {바꿀 파일 이름}{바뀌기 전 파일 이름}
+```
+
