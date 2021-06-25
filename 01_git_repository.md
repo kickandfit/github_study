@@ -41,3 +41,13 @@ $ git push -u origin master
 
 - commit 내역이 없으면 업로드 불가능
 
+## 원격 저장소 내용 전체 복제(clone)
+
+```bash
+#git아, 전체 복제 해줘 {원격저장소 url}
+$ git clone {원격저장소 url}
+```
+
+- 주의사항
+  - 이미 git init이 되어 있음
+
