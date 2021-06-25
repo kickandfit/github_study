@@ -66,9 +66,10 @@ $ git checkout -b {branch name}
 # 뜨는 창 맨 윗 줄이 commit message
 ```
 
- 반드시 master 브랜치에 브랜치를 병합
+​	반드시 master 브랜치에 브랜치를 병합
 
 - 브랜치 삭제
+  - 작업 완료후 삭제를 해줘야 관리하기 편함
 
 ```bash
 $ git branch -d {branch name}
@@ -80,4 +81,44 @@ $ git branch -d {branch name}
 ```bash
 $ git branch -D {branch name} 
 ```
+
+## 3가지 병합 상황
+
+### 1. fast-foward
+
+"다른 브랜치 생성 한 후, master 브랜치에 변경 사항이 없을 때"
+
+- 생성된 브랜치에는 작업을하고
+- 기존 master 브랜치에서 작업을 하지 않았을 때 나타남
+
+### 2. 3-way Merge
+
+"현재 브랜치(master)가 가르키는 커밋이 Merge 할 브랜치의 조상이 아니라면 깃은 현재 브랜치와 머지할 브랜치의 커밋 2개와 두 브랜치의 공통조상 하나를 사용한다."
+
+#### 1. 새로운 브랜치 signup 생성
+
+#### 2. signup 브랜치에서 signup.py 생성
+
+- git add, commit 잊지 말기
+
+#### 3. master 브랜치에서 new folder 생성
+
+#### 4. master 브랜치와 signup 브랜치 병합
+
+#### 5. signup 브랜치 삭제
+
+### Merge Conflict
+
+"두 개의 브랜치가 동일한 파일의 동일한 위치를 수정하고 merge 하려고 할 때 발생하는 현상
+
+단, 동일 파일을 수정했다고 하더라도 서로 다른 영역을 수정한다면 merge conflict는 발생하지 않는다"
+
+- git이 자동으로 병합하지 못하는 상황
+
+1. 새로운 브랜치 hotfix 생성
+2. hotfix 브랜치 b.txt에 새로운 내용 입력
+   - git add, commit
+3. master 브랜치에서 b.txt에 새로운 내용 입력
+   - git add, commit
+4.  master 브랜치와 hotfix 브랜치 병합
 
