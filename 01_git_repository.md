@@ -51,3 +51,15 @@ $ git clone {원격저장소 url}
 - 주의사항
   - 이미 git init이 되어 있음
 
+## 원격 저장소 수정 내용 가져오기 (pull)
+
+- 상황 강의장에서 수업듣고, push 했음
+- 집에서 그 파일을 가져오고자 함
+  - 조건 : 업데이트 전 파일이 있음
+
+```bash
+#git아 당겨올거야 origin repository에서 master branch로
+$ git pull origin master
+```
+
+- 원격 저장소의 변경사항을 받아옴(업데이트)
