@@ -116,9 +116,44 @@ $ git branch -D {branch name}
 - git이 자동으로 병합하지 못하는 상황
 
 1. 새로운 브랜치 hotfix 생성
+
+   ```bash
+   $ git branch hotfix
+   $ git checkout hotfix
+   # $ git checkout -b hotfix
+   ```
+
+   
+
 2. hotfix 브랜치 b.txt에 새로운 내용 입력
+
    - git add, commit
+
+     ```bash
+     $ git add b.txt
+     $ git commit -m "message"
+     ```
+
+     
+
 3. master 브랜치에서 b.txt에 새로운 내용 입력
+
    - git add, commit
+
+     ```bash
+     $git checkout master
+     $git add . or b.txt
+     $git commit -m "message"
+     ```
+
+     
+
 4.  master 브랜치와 hotfix 브랜치 병합
 
+   ```bash
+   $git merge hotfix
+   #git status에서 어디서 conflict 되고 있는지 볼 수 있음
+   #b.txt 가서 conflict 부분 modified
+   ```
+
+   
